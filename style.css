@@ -1,0 +1,42 @@
+
+    body,html{margin:0;padding:0;
+        height:100%;
+        font-family:Segoe UI,Roboto,sans-serif;background:#02030c;
+        color:#e8f0ff;
+        overflow:hidden}
+    .container{display:flex;height:100%}
+
+    /* Left side hacker vibes */
+    .left{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;background:radial-gradient(circle at 30% 30%,#051a1f 0%,#01040a 100%);color:#0ff;position:relative;overflow:hidden}
+    .tagline{font-size:1.8rem;font-weight:700;text-shadow:0 0 12px #0ff,0 0 24px #0ff}
+    .slogan{margin-top:12px;font-size:1rem;color:#77e6ff;text-shadow:0 0 8px #0ff}
+    /* flicker effect */
+    .tagline span{animation:flicker 2.8s infinite alternate}
+    @keyframes flicker{0%,19%,21%,23%,25%,54%,56%,100%{opacity:1}20%,22%,24%,55%{opacity:.2}}
+
+    /* Right side login */
+    .right{flex:1;display:flex;justify-content:center;align-items:center;background:rgba(255,255,255,0.02);backdrop-filter:blur(8px)}
+
+    .card{width:360px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:28px;box-shadow:0 0 24px rgba(0,255,200,0.15);animation:slideIn .9s forwards}
+    @keyframes slideIn{from{transform:translateY(30px);opacity:0}to{transform:none;opacity:1}}
+
+    h2{margin:0;font-size:1.4rem;font-weight:700;margin-bottom:14px;text-align:center;color:#0ff;text-shadow:0 0 8px #0ff}
+
+    .field{margin-bottom:16px;display:flex;flex-direction:column}
+    label{margin-bottom:6px;font-size:.86rem;color:#99f}
+    input{padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.12);background:rgba(0,0,0,0.3);color:#fff;font-size:.95rem;transition:all .25s}
+    input:focus{border-color:#0ff;box-shadow:0 0 12px #0ff;outline:none;animation:pulse 1.8s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 6px #0ff}50%{box-shadow:0 0 20px #0ff}100%{box-shadow:0 0 6px #0ff}}
+
+    .toggle{font-size:.8rem;color:#0ff;cursor:pointer;text-align:right;margin-top:-10px;margin-bottom:10px}
+
+    .btn{width:100%;padding:12px;background:linear-gradient(90deg,#0ff,#0cf);border:none;border-radius:10px;font-weight:700;cursor:pointer;color:#02030c;transition:transform .12s,box-shadow .2s}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 0 20px #0ff}
+    .btn:active{transform:translateY(2px)}
+
+    .error{color:#f66;font-size:.8rem;margin-top:6px}
+    .switch{margin-top:12px;text-align:center;font-size:.86rem;color:#77e6ff;cursor:pointer}
+    .lockout{color:#f66;text-align:center;margin-top:10px;font-size:.86rem}
+
+    @media(max-width:800px){.container{flex-direction:column}.left{height:40%}.right{height:60%}}
+  

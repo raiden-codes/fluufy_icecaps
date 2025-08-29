@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VaultBank — Neon Secure Login</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="tagline"><span>VaultBank</span> Secure Access</div>
+      <div class="slogan">Your digital fortress. Neon shielded.</div>
+    </div>
+    <div class="right">
+      <div class="card">
+        <h2 id="loginMode">Login with Password</h2>
+        <form id="loginForm" novalidate>
+          <div class="field">
+            <label for="user">Account / Email</label>
+            <input id="user" type="text" placeholder="user@bank.com or account#" required />
+            <div id="userError" class="error"></div>
+          </div>
+          <div id="passwordFields">
+            <div class="field">
+              <label for="pass">Password</label>
+              <input id="pass" type="password" placeholder="Enter password" required />
+              <div id="passError" class="error"></div>
+            </div>
+          </div>
+          <div id="otpFields" style="display:none">
+            <div class="field">
+              <label for="otp">One-Time Password</label>
+              <input id="otp" type="text" placeholder="6-digit code" />
+              <div id="otpError" class="error"></div>
+            </div>
+          </div>
+          <button class="btn" type="submit">Sign In</button>
+          <div class="switch" id="switchMode">Use OTP Instead</div>
+        </form>
+        <div id="lockoutMsg" class="lockout"></div>
+      </div>
+    </div>
+  </div>
+ <script src="./vault.js"></script>
+</body>
+</html>
